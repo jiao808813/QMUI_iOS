@@ -348,9 +348,11 @@ NSString *const kShouldFixTitleViewBugKey = @"kShouldFixTitleViewBugKey";
                         UINavigationController *nav = [selfObject.qmui_viewController isKindOfClass:UINavigationController.class] ? selfObject.qmui_viewController : nil;
                          isPresenting = nav && nav.presentedViewController;
                     }
+                    /*
                     if (isSystemBar && !alreadyMoveToWindow && !isPresenting) {
                         QMUIAssert(NO, @"UINavigationBar (QMUI)", @"试图在 UINavigationBar 尚未添加到 window 上时就修改它的样式，可能导致 UINavigationBar 的样式无法与全局保持一致。");
                     }
+                    */
                 };
             });
         }
