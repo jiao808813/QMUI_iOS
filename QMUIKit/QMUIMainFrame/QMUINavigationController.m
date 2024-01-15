@@ -144,7 +144,9 @@ static char kAssociatedObjectKey_qmui_viewWillAppearNotifyDelegate;
 }
 
 - (void)dealloc {
-    self.delegate = nil;
+    if (self.delegate != nil){
+        self.delegate = nil;
+    }
 }
 
 - (void)viewDidLoad {
